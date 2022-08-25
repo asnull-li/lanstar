@@ -19,8 +19,10 @@
           href="<?php utils::indexTheme('assets/css/OwO.min.css');?>">
     <link rel="stylesheet"
           href="<?php utils::indexTheme('assets/css/gazeimg.css');?>">
+    <!--<link rel="stylesheet"-->
+    <!--      href="<?php # utils::indexTheme('assets/css/prism.css');?>">-->
     <link rel="stylesheet"
-          href="<?php utils::indexTheme('assets/css/prism.css');?>">
+          href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark-reasonable.min.css">
     <title><?php $this->archiveTitle(array(
             'category' => _t('分类 %s 下的文章'),
             'search' => _t('包含关键字 %s 的文章'),

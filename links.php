@@ -59,8 +59,30 @@ $this->need('layout/header.php');
                         <?php endif; ?>
                     </ol>
                 </nav>
-                <!--文章内容-->
+                
+                
                 <div class="article-content">
+                    <!-- 友链部分 -->
+                    <div class="links-box container-fluid">
+                        <div class="row">
+                            
+                            <?php 
+                                if(class_exists('Links_Plugin')){
+                                    $rules ='<div class="col-lg-2 col-6 col-md-2 col-sm-3 links-container"><a href="{url}" title="{title}" target="_blank" class="links-link">
+                                        <div class="links-item">
+                                            <div class="links-img"><img src="{image}" class="gi-darken gi-fadeIn" style="filter: brightness(1);"></div>
+                                            <div class="links-title">
+                                                <h4>{name}</h4>
+                                            </div>
+                                        </div>
+                                    </a></div>';
+                                    Links_Plugin::output($pattern=$rules, $links_num=0, $sort=NULL);
+                                };
+                            ?> 
+                            
+                        </div>
+                    </div>
+                    <!--文章内容-->
                     <?php $this->content(); ?>
                 </div>
             </main>
